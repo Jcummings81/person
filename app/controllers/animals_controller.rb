@@ -27,6 +27,7 @@ class AnimalsController < ApplicationController
 
   def update
     @animal =Animal.find(params[:id])
+
     if @animal.update(animal_params)
       redirect_to animals_path
     else
@@ -41,6 +42,6 @@ class AnimalsController < ApplicationController
 
   private
   def animal_params
-    params.require(:animal).permit(:name, :age, :hair_color, :eye_color, :alive)
+    params.require(:animal).permit(:name, :age, :hair_color, :eye_color, :gender, :alive)
   end
 end
