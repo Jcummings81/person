@@ -1,7 +1,7 @@
 <h1>Animals</h1>
 <% @animals.each do |animal| %>
    <h2> <%= animal.name %> </h2>
-    <%= link_to 'Show', animal_path(animal.id) %>
+    <%= link_to 'Show', animal_path(animal) %>
     <p><%= link_to 'New Animal', new_animal_path %></p>
     <%= link_to 'Edit Animal', edit_animal_path(animal) %>
     <%= link_to 'Delete Animal', animal, method: :delete %>
